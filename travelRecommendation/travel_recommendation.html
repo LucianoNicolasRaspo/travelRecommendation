@@ -3,43 +3,103 @@
 <head>
     <title>Travel Recommendation 2.0</title>
     <link rel="stylesheet" href="travel_recommendation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
 
 <header class="header">
         <a href="#" class="link">
             <img src="resource/logo1.png" alt="Imagen" class="icon">
-            Travel Recommendation 2.0
+            Travel Recommendation
         </a>
         <nav class="navbar">
-            <a href="#">Home</a>
-            <a href="#">About Us</a>
-            <a href="#">Contact Us</a>
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact Us</a>
         </nav>
 
         <div class="search-container">
-            <input type="text" placeholder="Enter a Destination or keyword" class="search-bar">
-            <button class="btn primary">Search</button>
-            <button class="btn secondary">Clear</button>
+            <input id="search" type="text" placeholder="Enter a Destination or keyword" class="search-bar">
+            <button id="btnSearch" class="btn primary">Search</button>
+            <button id="btnClear" class="btn secondary">Clear</button>
         </div>
-
 </header>
+</br>
+</br>
+</br>
 </br>
 <section id="home" class="section">
     <h1>Welcome to Travel Recommendation 2.0</h1>
-    <p>Find the best travel destinations with personalized recommendations.</p>
+    <p>
+        Explore the world with personalized recommendations tailored just for you. Whether you're craving an exotic getaway, a peaceful nature retreat, or an action-packed adventure, we help you find the perfect destination.
+        Discover hidden gems, plan unforgettable trips, and turn your travel dreams into reality.
+        
+        Start your journey today!</p>
 </section>
 
 <!-- Sección About Us -->
 <section id="about" class="section">
     <h1>About Us</h1>
-    <p>We are passionate about helping travelers explore the world with the best recommendations.</p>
+    <p>Who We Are
+        At Travel Recommendation, we are passionate explorers dedicated to making travel planning effortless and exciting. Our mission is to inspire and guide travelers by providing curated destination suggestions based on their preferences and desires.
+        
+        We combine expert insights with data-driven recommendations to help you uncover the best places to visit, from iconic landmarks to local treasures.
+        Let us be your compass to a world of endless possibilities!</p>
 </section>
 
 <!-- Sección Contact Us -->
 <section id="contact" class="section">
     <h1>Contact Us</h1>
-    <p>Have any questions? Reach out to us at <a href="mailto:info@travelrecommendation.com">info@travelrecommendation.com</a></p>
+    <p>Get in Touch
+        Have questions or need personalized travel advice? We’d love to hear from you!
+        Whether you’re planning your next big adventure or just exploring ideas, our team is here to assist you.
+        
+    </br>
+    </br>
+        📩 Email: info@travelrecommendation.com
+    </br>
+    </br>
+        📞 Phone: +1 123-456-7890
+    </br>
+    </br>
+        🌍 Follow Us: Connect with us on social media to stay updated on travel tips and trends.
+            Fill out the form below, and we’ll get back to you as soon as possible!</p>
+    </br>
+    <form id="contactForm">
+      <div>
+        <label for="name">Name</label>
+        <input class="custom-input" type="text" id="name" name="name" required>
+      </div>
+      <div>
+        <label  for="email">Email</label>
+        <input class="custom-input" type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="message">Message</label>
+        <textarea class="custom-textarea" id="message" name="message" rows="5" required></textarea>
+      </div>
+      <button class="btn send" type="submit" onclick="contact()">Submit</button>
+    </form>
 </section>
+
+<section id="searchCity" class="section">
+    <h1>Explore Dream Destination...</h1></br>
+    <div class="searchCity">
+        <div id="result"></div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-container">
+        <p>&copy; 2025 Travel Recommendation 2.0. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://x.com" target="_blank" class="icon-link"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://youtube.com" target="_blank" class="icon-link"><i class="fab fa-youtube"></i></a>
+            <a href="https://github.com" target="_blank" class="icon-link"><i class="fab fa-github"></i></a>
+            <a href="https://facebook.com" target="_blank" class="icon-link"><i class="fab fa-facebook"></i></a>
+        </div>
+    </div>
+</footer>
+<script src="./travel_recommendation.js"></script>
 </body>
 </html>
